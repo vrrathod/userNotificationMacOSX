@@ -57,10 +57,10 @@
     NSString* message = @"";
     switch (notification.activationType) {
         case NSUserNotificationActivationTypeActionButtonClicked:
-            message =@"Action Button Clicked";
+            message = [NSString stringWithFormat:@"Action Button Clicked %@", notification.actionButtonTitle];
             break;
         case NSUserNotificationActivationTypeContentsClicked:
-            message = @"Contents Clicked";
+            message = [NSString stringWithFormat:@"Contents Clicked %@ [%@]", notification.title, notification.subtitle];
             break;
         case NSUserNotificationActivationTypeReplied:
             message = @"Replied ??";
