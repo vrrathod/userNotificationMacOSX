@@ -44,6 +44,10 @@
     [self.labelActionTitle setEnabled:showAction];
 }
 
+- (IBAction)openPrefs:(id)sender {
+    [[NSWorkspace sharedWorkspace] openFile:@"/System/Library/PreferencePanes/Notifications.prefPane"];
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////
 - (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center
      shouldPresentNotification:(NSUserNotification *)notification {
