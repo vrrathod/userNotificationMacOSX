@@ -25,7 +25,6 @@
 }
 
 - (IBAction)showNotification:(id)sender{
-    NSLog(@"%s", __FUNCTION__);
     [self.labelUserActionInfo setStringValue:@"Label"];
     NSUserNotification* notification = [[NSUserNotification alloc] init];
     notification.title = self.title.stringValue;
@@ -51,7 +50,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 - (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center
      shouldPresentNotification:(NSUserNotification *)notification {
-    NSLog(@"%s", __FUNCTION__);
     return YES;
 }
 - (void)userNotificationCenter:(NSUserNotificationCenter *)center
@@ -72,7 +70,6 @@
             message = @"None";
             break;
     }
-    NSLog(@"%@", message);
     [self.labelUserActionInfo setStringValue:message];
     [nc removeDeliveredNotification:notification];
 }
