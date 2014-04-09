@@ -74,5 +74,6 @@
     }
     NSLog(@"%@", message);
     [self.labelUserActionInfo setStringValue:message];
+    [nc removeDeliveredNotification:notification];
 }
 @end
